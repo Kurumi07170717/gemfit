@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食事の記録 | ヘルスケアアプリ</title>
+    <link rel="stylesheet" href="style_meal_record_form.css"> 
+</head>
+<body>
+    <div class="background-a"> 
+
+        <a href="index.html" class="back-link">
+            &lt; ホームに戻る
+        </a>
+
+        <div class="background-b"> 
+
+            <h1>🍽 食事の記録</h1>
+
+            <section id="meal-history-section">
+                <h3>📜 食事の履歴 (直近5件)</h3>
+                <div id="meal-history-container">
+                    <p style="color: gray;">履歴を読み込み中...</p>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="calorie-search-section">
+                <h3>1. 食事名でカロリーを検索</h3>
+                <div class="form-container" style="max-width: none;"> 
+                    <input type="text" id="food-input" placeholder="例: カレーライス, ラーメン" required>
+                    <button id="search-button">カロリーを検索</button>
+                    
+                    <div id="calorie-result">
+                        <p>ここに検索結果の栄養情報が表示されます。</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="meal-record-section">
+                <h3>2. 記録する（検索結果をコピーして確定）</h3>
+                
+                <form id="meal-form" class="form-container" style="max-width: none;">
+                    <label for="meal-date">日付:</label>
+                    <input type="text" id="meal-date" readonly value="">
+                    
+                    <label for="meal-name">食事名:</label>
+                    <input type="text" id="meal-name" placeholder="検索後に値が入ります" required>
+
+                    <label for="recorded-calorie">推定カロリー (kcal):</label>
+                    <input type="number" id="recorded-calorie" placeholder="検索後に値が入ります" required>
+                    
+                    <button type="submit" id="record-meal-button">この食事を記録する</button>
+                </form>
+
+                <p id="meal-message"></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="script_meal_record_form.js"></script>
+</body>
+</html>

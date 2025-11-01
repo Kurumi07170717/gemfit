@@ -1,0 +1,176 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffa500; /* 全体の背景色はオレンジを維持 */
+}
+
+/* --- 背景要素のスタイル --- */
+
+.background-a {
+    padding: 20px 10px; 
+    background-color: #ffa500;
+    min-height: 100vh;
+}
+
+.background-b {
+    color: #fff;
+    font-size: 14px;
+    background-color: #ffd700;
+    padding: 15px 10px; 
+    position: relative;
+    border-radius: 10px;
+    top: 0px;
+    /* ⭐ 修正ポイント: 中央寄せと最大幅を設定し、黄色い枠のサイズを制御 ⭐ */
+    margin: 10px auto; 
+    width: 95%; 
+    max-width: 400px; 
+}
+
+.background-c {
+    color: #fff;
+    font-size: 14px;
+    background-color: #ffd700;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    top: 0px;
+    margin-left: -20px; 
+    margin-top: 45px; 
+    max-width: 350px; 
+}
+
+/* --- ナビゲーション --- */
+.main-nav { display: flex; justify-content: center; }
+.main-nav ul { display: flex; list-style: none; padding: 0; margin: 0; }
+.main-nav li { margin: 0 5px; }
+.main-nav a {
+    display: block; padding: 5px 5px; text-decoration: none;
+    color: #333; font-weight: bold; font-size: 15px;
+    background-color: #fff; border-radius: 10px;
+    transition: background-color 0.3s; white-space: nowrap;
+}
+
+/* --- フォームとボタンのスタイル --- */
+
+.form-container {
+    background-color: white; padding: 20px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); border: 1px solid black; 
+    margin: 10px auto 20px auto; width: 90%; max-width: 300px; 
+}
+label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
+
+input[type="number"],
+input[type="text"],
+input[readonly], /* ⭐ 日付などの読み取り専用フィールドの幅を修正 ⭐ */
+.form-container select { 
+    width: 100%; padding: 10px; margin-bottom: 15px;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+
+input[type="submit"], 
+.form-container button, 
+#record-meal-button,
+#search-button {
+    background-color: orange; color: black; padding: 10px 15px;
+    border: none; border-radius: 4px; cursor: pointer;
+    font-size: 16px; width: 100%; font-weight: bold; margin-top: 5px;
+}
+
+input[type="submit"]:hover, .form-container button:hover,
+#record-meal-button:hover, #search-button:hover { background-color: orangered; }
+
+/* メッセージ表示エリアのスタイル */
+#message, #meal-message, #review-message {
+    margin-top: 15px; font-weight: bold; color: orange; text-align: center;
+}
+
+/* 目標設定ボタンのスタイル（white-button1） */
+.white-button1 {
+    display: block; padding: 15px 24px; background-color: #ffffff;
+    color: #333333; border: 1px solid #000000; border-radius: 15px;
+    text-decoration: underline; text-decoration-color: #000000;
+    font-weight: bold; font-size: 18px; margin: 15px auto; width: fit-content;
+}
+.white-button1:hover { background-color: #f2f2f2; color: #000000; cursor: pointer; }
+
+/* その他スタイル */
+.form-container input[type="date"] {
+    width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;
+    border-radius: 4px; box-sizing: border-box;
+}
+.result-box, #calorie-result div { 
+    background-color: white; padding: 20px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); border: 2px solid #333; 
+    margin: 20px auto 10px auto; width: 90%; max-width: 300px;
+    color: #333; line-height: 1.6; text-align: center;
+}
+.meal-item { 
+    border: 1px solid #ccc; padding: 10px; margin-bottom: 8px;
+    display: flex; justify-content: space-between; align-items: center;
+    background-color: white; border-radius: 4px; margin-left: auto;
+    margin-right: auto; max-width: 300px; color: #333;
+}
+.delete-btn {
+    padding: 5px 10px !important; background-color: #ff4d4d !important;
+    color: white !important; font-size: 14px !important; width: auto !important;
+}
+
+/* ===== Responsive overrides (追加) ===== */
+.main-nav ul { flex-wrap: wrap; gap: 6px; }
+.background-b, .background-c { width: 95%; max-width: 420px; margin: 10px auto 0 auto; height: auto; }
+.form-container, #calorie-result div { width: 95%; max-width: 420px; margin-left: auto; margin-right: auto; }
+.meal-item { max-width: 420px; }
+#meal-message, #review-message { text-align: center; }
+
+/* 追加: はみ出し防止と狭幅ナビ調整 */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+@media (max-width: 360px) {
+  /* ナビを横スクロール1行化 */
+  .main-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .main-nav ul { flex-wrap: nowrap; gap: 4px; }
+  .main-nav a { font-size: 12px; padding: 6px 8px; white-space: nowrap; }
+}
+
+@media (min-width: 768px) {
+  .background-b, .background-c { max-width: 720px; }
+  .form-container, #calorie-result div, .meal-item { max-width: 560px; }
+}
+
+/* style_meal_record_form.css に追記 */
+
+#meal-history-section {
+    margin-bottom: 20px;
+}
+/* style_meal_record_form.css に追記・修正 */
+
+#meal-history-section {
+    margin-bottom: 20px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.history-table th,
+.history-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #333; /* ★ 修正点: この行を追加して文字色を黒（濃いグレー）に指定 */
+}
+
+.history-table th {
+    background-color: #f2f2f2;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

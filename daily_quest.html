@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemFit - デイリークエスト</title>
+    <link rel="stylesheet" href="style_daily_quest.css">
+    
+    <style>
+        .quest-list {
+            list-style: none;
+            padding: 0 10px;
+            color: #333; /* 文字色を黒に */
+        }
+        .quest-item {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .quest-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            accent-color: #007bff;
+        }
+        #quest-message {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            display: none; /* JSで表示 */
+            margin: 10px;
+        }
+        #quest-message.congrats {
+            background-color: #e6f7ff;
+            border: 1px solid #007bff;
+            color: #0056b3;
+            display: block; /* 表示する */
+        }
+        /* ★ 追加: 読み込みメッセージ用のスタイル */
+        #quest-loading-status {
+            text-align: center; 
+            color: #555; 
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-a">
+        <div class="background-b">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="weight_dashboard.html">体重入力（目標）</a></li>
+                    <li><a href="meal_record_form.html">食事記録</a></li>
+                    <li><a href="daily_quest.html">デイリークエスト</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="background-c">
+            <h1 style="text-align: center; font-size: 24px; margin-top: 10px; color: #333;">
+                デイリークエスト
+            </h1>
+            
+            <div id="quest-loading-status">
+                クエストの達成状況を確認中...
+            </div>
+            
+            <ul class="quest-list" style="display: none;">
+                <li class="quest-item">
+                    <input type="checkbox" id="quest-weight-check" disabled>
+                    <label for="quest-weight-check">今日の体重を記録する</label>
+                </li>
+                
+                <li class="quest-item">
+                    <input type="checkbox" id="quest-meal-check" disabled>
+                    <label for="quest-meal-check">今日の食事を記録する</label>
+                </li>
+            </ul>
+
+            <div id="quest-message">
+                <p>🎉 おめでとうございます！ 🎉<br>本日のクエストをすべて達成しました！</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script_daily_quest.js"></script>
+</body>
+</html>

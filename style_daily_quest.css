@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffa500;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px; /* PCでの最大幅 */
+    margin: 0 auto;
+    padding: 20px ;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* --- スマホ用のスタイル（デフォルト） --- */
+.contents {
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+}
+
+.main-content, .sidebar {
+    width: 100%; /* 幅を100%にする */
+    margin-bottom: 20px;
+}
+
+.main-content {
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #f1c40f;
+    padding: 20px;
+}
+
+.background-a {
+    height: 620px; /* 高さ指定 */            /* 高さ指定 */
+    padding:  20px;                 /* 余白指定 */
+    background-color: #ffa500;   /* 背景色指定 */
+}
+
+.background-b {
+    color:  #fff;                   /* 文字色指定 */
+    height: 25px;                  /* 高さ指定 */
+    width:  330px;                  /* 幅指定 */
+    font-size:  14px;               /* 文字サイズ指定 */
+    background-color: #ffd700;         /* 背景色指定 */
+    padding:  20px;               /* 余白指定 */                  
+    position: relative ;  
+    border-radius: 10px;          /* 位置指定 */
+    top: 0px;                     /* 位置指定 */
+    margin-left: -9px;
+}
+.background-c {
+    color:  #fff;                   /* 文字色指定 */
+    height: 470px;                  /* 高さ指定 */
+    width:  330px;                  /* 幅指定 */
+    font-size:  14px;               /* 文字サイズ指定 */
+    background-color: #ffd700;         /* 背景色指定 */
+    padding:  20px;               /* 余白指定 */                  
+    position: relative ;  
+    border-radius: 10px;          /* 位置指定 */
+    top: 0px;                     /* 位置指定 */
+    margin-left: -9px;
+    margin-top:34px;
+}
+.main-nav {
+  /* メニューを中央に配置したい場合 */
+  display: flex;
+  justify-content: center;
+}
+
+/* メニューのリスト全体（ulタグ） */
+.main-nav ul {
+  display: flex; /* ★項目を横並びにする */
+  list-style: none; /* ・←この黒丸を消す */
+  padding: 0;
+  margin: 0;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+
+.main-nav li {
+  margin: 0 5px; /* メニュー項目の間に左右15pxの余白を設ける */
+}
+.main-nav a {
+  display: block; /* クリックできる範囲を広げる */
+  padding: 5px 5px; /* 文字の周りの余白 */
+  text-decoration: none; /* リンクの下線を消す */
+  color: #333; /* 文字色 */
+  font-weight: bold; /* 文字を太くする */
+  font-size:15px;
+  background-color: #fff; /* メニューの背景色（例：白） */
+  border-radius: 10px; /* 角を丸くする */
+  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+   white-space: nowrap;
+}
+
+/* ===== Responsive overrides (追加) ===== */
+.main-nav ul { flex-wrap: wrap; gap: 6px; }
+.background-b { width: 95%; max-width: 420px; margin: 0 auto; height: auto; }
+.background-c { width: 95%; max-width: 420px; margin: 20px auto 0 auto; height: auto; }
+
+/* 追加: はみ出し防止と狭幅ナビ調整 */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+@media (max-width: 360px) {
+  /* ナビを横スクロール1行化 */
+  .main-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .main-nav ul { flex-wrap: nowrap; gap: 4px; }
+  .main-nav a { font-size: 12px; padding: 6px 8px; white-space: nowrap; }
+}
+
+@media (min-width: 768px) {
+  .background-b { max-width: 720px; }
+  .background-c { max-width: 720px; }
+}

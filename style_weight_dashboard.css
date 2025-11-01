@@ -1,0 +1,221 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffa500; /* 全体の背景色はオレンジを維持 */
+}
+
+/* --- 背景要素のスタイル（画面サイズに合わせて変更、左寄せに戻す） --- */
+
+.background-a {
+    padding: 20px 10px; 
+    background-color: #ffa500;
+    min-height: 100vh; /* 画面全体をカバーするために最小高さを設定 */
+}
+
+.background-b {
+    color: #fff;
+    font-size: 14px;
+    background-color: #ffd700;
+    padding: 15px 10px; 
+    position: relative;
+    border-radius: 10px;
+    top: 0px;
+    /* ⭐ 修正: 左寄せに戻す ⭐ */
+    margin-left: -9px; 
+    max-width: 350px; 
+}
+
+.background-c {
+    color: #fff;
+    font-size: 14px;
+    background-color: #ffd700;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    top: 0px;
+    /* ⭐ 修正: 左寄せに戻す ⭐ */
+    margin-left: -20px; 
+    margin-top: 45px; 
+    max-width: 350px; 
+}
+
+/* --- ナビゲーション（元のCSSをそのまま使用、中央寄せは維持） --- */
+.main-nav {
+    display: flex;
+    justify-content: center;
+}
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav li {
+    margin: 0 5px;
+}
+.main-nav a {
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+/* --- フォームとボタンのスタイル --- */
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid black; 
+    /* ⭐ 中央寄せは維持 (フォームは黄色い枠の中で中央寄せが一般的) ⭐ */
+    margin: 10px auto 20px auto; 
+    width: 90%; 
+    max-width: 300px; 
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333; 
+}
+
+input[type="number"],
+.form-container select { 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 記録ボタン（submit）のスタイル */
+input[type="submit"] {
+    background-color: orange; 
+    color: black; 
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-weight: bold; 
+}
+
+input[type="submit"]:hover {
+    background-color: orangered; 
+}
+
+/* メッセージ表示エリアのスタイル */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: orange;
+}
+
+/* 目標設定ボタンのスタイル（white-button1） */
+.white-button1 {
+    display: block; 
+    padding: 15px 24px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-decoration: underline;
+    text-decoration-color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    /* ⭐ 中央寄せを維持 ⭐ */
+    margin: 15px auto; 
+    width: fit-content;
+}
+
+.white-button1:hover {
+    background-color: #f2f2f2;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* 目標設定ページ専用のスタイル */
+
+/* 入力欄の微調整 */
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* メッセージの注意書き */
+.note {
+    font-size: 12px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+/* 結果表示ボックスのスタイル */
+.result-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333; 
+    /* ⭐ 中央寄せを維持 ⭐ */
+    margin: 20px auto 10px auto;
+    width: 90%; 
+    max-width: 300px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.result-box hr {
+    border-color: #ffd700; 
+    margin: 10px 0;
+}
+
+.calorie-required span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: orangered;
+}
+
+/* ===== Responsive overrides (追加) ===== */
+.main-nav ul { flex-wrap: wrap; gap: 6px; }
+.background-b { width: 95%; max-width: 420px; margin: 0 auto; height: auto; }
+.background-c { width: 95%; max-width: 420px; margin: 20px auto 0 auto; height: auto; }
+.chart-area { max-width: 100%; height: 240px; }
+.form-container { width: 95%; max-width: 420px; margin-left: auto; margin-right: auto; }
+.white-button1 { margin-left: auto; margin-right: auto; width: 90%; max-width: 360px; }
+#message { text-align: center; }
+
+/* 追加: はみ出し防止と狭幅ナビ調整 */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+@media (max-width: 360px) {
+  /* ナビを横スクロール1行化 */
+  .main-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .main-nav ul { flex-wrap: nowrap; gap: 4px; }
+  .main-nav a { font-size: 12px; padding: 6px 8px; white-space: nowrap; }
+}
+
+@media (min-width: 768px) {
+  .background-b { max-width: 720px; }
+  .background-c { max-width: 720px; }
+  .chart-area { height: 320px; }
+  .white-button1 { max-width: 520px; }
+}

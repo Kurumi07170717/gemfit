@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemFit - 体重入力</title>
+    <link rel="stylesheet" href="style_weight_dashboard.css">
+</head>
+
+<body>
+    <div class="background-a">
+        <div class="background-b">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="weight_dashboard.html">体重入力（目標）</a></li>
+                    <li><a href="meal_record_form.html">食事記録</a></li>
+                    <li><a href="daily_quest.html">デイリークエスト</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="background-c">
+            
+            <div class="chart-area" style="width: 90%; margin: 20px auto 10px auto;">
+                <canvas id="weightChart"></canvas>
+            </div>
+            
+            <div class="form-container">
+                <form id="weight-form" action="#">
+                    <label for="weight">体重 (kg)</label>
+                    <input type="number" 
+                           id="weight" 
+                           name="user_weight" 
+                           min="1" 
+                           max="500" 
+                           step="0.1" 
+                           required>
+                    
+                    <input type="submit" value="体重を記録する">
+                </form>
+                
+                <p id="message"></p>
+            </div>
+            
+          <a href="goal_setting_form.html" class="white-button1">目標の設定</a>
+            
+        </div>
+    </div>
+    
+    <script src="script_weight_dashboard.js"></script>
+</body>
+</html>

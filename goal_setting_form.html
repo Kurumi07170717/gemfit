@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemFit - 目標設定</title>
+    <link rel="stylesheet" href="style_weight_dashboard.css"> 
+</head>
+
+<body>
+    <div class="background-a">
+        <div class="background-b">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="weight_dashboard.html">体重入力（目標）</a></li>
+                    <li><a href="index.html">食事記録</a></li>
+                    <li><a href="daily_quest.html">デイリークエスト</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="background-c">
+            <div class="form-container" style="max-width: 320px;">
+                <h3 style="color: #333; text-align: center; margin-top: 0;">💪 目標を設定しよう</h3>
+                
+                <form id="goal-form" action="#">
+                    
+                    <label for="current_weight">現在の体重 (kg)</label>
+                    <input type="number" id="current_weight" name="current_weight" min="1" max="500" step="0.1" required readonly value="65.0">
+                    <p class="note">※これは前回入力された体重です。</p>
+
+                    <label for="target_weight">目標体重 (kg)</label>
+                    <input type="number" id="target_weight" name="target_weight" min="1" max="500" step="0.1" required>
+
+                    <label for="target_period_months">目標期間 (ヶ月)</label>
+                   <input type="number" id="target_period_months" name="target_period_months" min="1" max="60" required value="9">
+                    
+                    <label for="gender">性別</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">男性</option>
+                        <option value="female">女性</option>
+                    </select>
+
+                    <label for="height">身長 (cm)</label>
+                    <input type="number" id="height" name="height" min="1" max="300" step="1" required>
+
+                    <label for="age">年齢</label>
+                    <input type="number" id="age" name="age" min="1" max="150" required>
+                    
+                    <input type="submit" value="目標とカロリーを計算する">
+                </form>
+            </div>
+            
+            <div class="result-box" id="result-area" style="display:none;">
+                <h4 style="color: #333; margin-top: 0;">✨ 計算結果 ✨</h4>
+                <p>目標達成までの期間: <span id="days-remaining"></span> 日</p>
+                <p>減量目標: <span id="weight-loss"></span> kg</p>
+                <hr>
+                
+                <p class="calorie-required">推奨 1日摂取カロリー: <span id="intake-calorie"></span> kcal</p>
+            </div>
+            
+            <p id="goal-message" style="margin-top: 15px; font-weight: bold; text-align: center;"></p>
+        </div>
+    </div>
+    
+    <script src="script_goal_setting_form.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+body {
+
+    font-family: sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    background-color: #ffa500;
+
+}
+
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1000px; /* PCでの最大幅 */
+
+    margin: 0 auto;
+
+    padding: 20px ;
+
+}
+
+
+
+header {
+
+    background-color: #3498db;
+
+    color: white;
+
+    padding: 1em 0;
+
+    text-align: center;
+
+}
+
+
+
+/* --- スマホ用のスタイル（デフォルト） --- */
+
+.contents {
+
+    display: flex;
+
+    flex-direction: column; /* 要素を縦に並べる */
+
+}
+
+
+
+.main-content, .sidebar {
+
+    width: 100%; /* 幅を100%にする */
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.main-content {
+
+    background-color: #ecf0f1;
+
+    padding: 20px;
+
+}
+
+
+
+.sidebar {
+
+    background-color: #f1c40f;
+
+    padding: 20px;
+
+}
+
+
+
+.background-a {
+
+    height: 620px; /* 高さ指定 */            /* 高さ指定 */
+
+    padding:  20px;                 /* 余白指定 */
+
+    background-color: #ffa500;   /* 背景色指定 */
+
+}
+
+
+
+.background-b {
+
+    color:  #fff;                   /* 文字色指定 */
+
+    height: 25px;                  /* 高さ指定 */
+
+    width:  330px;                  /* 幅指定 */
+
+    font-size:  14px;               /* 文字サイズ指定 */
+
+    background-color: #ffd700;         /* 背景色指定 */
+
+    padding:  20px;               /* 余白指定 */                  
+
+    position: relative ;  
+
+    border-radius: 10px;          /* 位置指定 */
+
+    top: 0px;                     /* 位置指定 */
+
+    margin-left: -9px;
+
+}
+
+.background-c {
+
+    color:  #fff;                   /* 文字色指定 */
+
+    height: 470px;                  /* 高さ指定 */
+
+    width:  330px;                  /* 幅指定 */
+
+    font-size:  14px;               /* 文字サイズ指定 */
+
+    background-color: #ffd700;         /* 背景色指定 */
+
+    padding:  20px;               /* 余白指定 */                  
+
+    position: relative ;  
+
+    border-radius: 10px;          /* 位置指定 */
+
+    top: 0px;                     /* 位置指定 */
+
+    margin-left: -20px;
+
+    margin-top:45px;
+
+}
+
+.main-nav {
+
+  /* メニューを中央に配置したい場合 */
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+
+/* メニューのリスト全体（ulタグ） */
+
+.main-nav ul {
+
+  display: flex; /* ★項目を横並びにする */
+
+  list-style: none; /* ・←この黒丸を消す */
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+nav ul{
+
+    margin:0;
+
+    padding:0;
+
+    list-style-type:none;
+
+}
+
+
+
+.main-nav li {
+
+  margin: 0 5px; /* メニュー項目の間に左右15pxの余白を設ける */
+
+}
+
+.main-nav a {
+
+  display: block; /* クリックできる範囲を広げる */
+
+  padding: 5px 5px; /* 文字の周りの余白 */
+
+  text-decoration: none; /* リンクの下線を消す */
+
+  color: #333; /* 文字色 */
+
+  font-weight: bold; /* 文字を太くする */
+
+  font-size:15px;
+
+  background-color: #fff; /* メニューの背景色（例：白） */
+
+  border-radius: 10px; /* 角を丸くする */
+
+  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+
+   white-space: nowrap;
+
+}
+
+.white-box {
+
+    /* 背景色を白にする */
+
+    background-color: white;
+
+
+
+    /* 文字色を黒にする */
+
+    color: black;
+
+    font-weight:bold;
+
+
+
+    /* 箱の内側に余白を作る（文字が端にくっつかないように） */
+
+    padding: 0px;
+
+    margin-left:16px;
+
+    margin-top:20px;
+
+
+
+    /* 箱の横幅を300pxに指定（指定しないと画面いっぱいに広がる） */
+
+    width: 280px;
+
+    height:60px;
+
+     border: 1px solid black;
+
+     border-radius: 30px;
+
+}
+
+.white-box1{
+
+/* 背景色を白にする */
+
+    background-color: white;
+
+
+
+    /* 文字色を黒にする */
+
+    color: black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+
+
+    text-align: center;
+
+   
+
+    /* 箱の内側に余白を作る（文字が端にくっつかないように）*/
+
+    margin-left:30px;
+
+    margin-top:20px;
+
+   
+
+   /*  箱の横幅を300pxに指定（指定しないと画面いっぱいに広がる） */
+
+    width: 250px;
+
+    /* height:60px; <-- この行を削除します！ */
+
+   
+
+    /* ★ 自動でメッセージが収まるように、上下にパディングを追加します */
+
+    padding: 10px 0;
+
+   
+
+    border: 1px solid black;
+
+    border-radius: 30px;
+
+}
+
+.nokori1 {
+
+  /* 下の余白をなくす */
+
+  margin-top:0;
+
+  margin-bottom: 0;
+
+  margin-left:50px;
+
+  font-size:20px;
+
+}
+
+
+
+.nokori2 {
+
+  /* 上の余白をなくす */
+
+  margin-top: 0;
+
+  margin-left:110px;
+
+  font-size:20px;
+
+}
+
+
+
+.white-button {
+
+  /* 見た目の設定 */
+
+  display: inline-block; /* ボタンらしい形にするため */
+
+  padding: 15px 24px; /* 内側の余白（上下左右） */
+
+  background-color: #ffffff; /* 背景色を白に */
+
+  color: #333333; /* 文字色を濃いグレーに */
+
+  border: 1px solid #000000; /* 枠線（白背景でも見えるように）*/
+
+  border-radius: 15px; /* 角を丸くする */
+
+  text-decoration: underline; /* 下線を引く */
+
+  text-decoration-color: #000000; /* 下線の色を黒にする */
+
+  font-weight: bold; /* 文字を太くする */
+
+  font-size:18px;
+
+  /* カーソルを乗せたときの変化を滑らかに */
+
+  transition: background-color 0.3s, color 0.3s;
+
+  margin-left:43px;
+
+  margin-top:20px;
+
+}
+
+
+
+/* マウスカーソルが乗ったときのデザイン */
+
+.white-button:hover {
+
+  background-color: #f2f2f2; /* 背景を少しグレーに */
+
+  color: #000000; /* 文字色を黒に */
+
+  cursor: pointer; /* カーソルを指マークに */
+
+}
+
+/* ===== 追加: はみ出し防止と基礎レスポンシブ ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+.main-nav ul { flex-wrap: wrap; gap: 6px; }
+
+@media (max-width: 360px) {
+  /* ナビを横スクロール1行化 */
+  .main-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .main-nav ul { flex-wrap: nowrap; gap: 4px; }
+  .main-nav a { font-size: 12px; padding: 6px 8px; white-space: nowrap; }
+}
+/* ===== Responsive overrides (追加) ===== */
+.main-nav ul { flex-wrap: wrap; gap: 6px; }
+.background-b {
+  width: 95%;
+  max-width: 420px;
+  margin: 0 auto;
+  height: auto;
+}
+.background-c {
+  width: 95%;
+  max-width: 420px;
+  margin: 20px auto 0 auto;
+  height: auto;
+}
+.white-box,
+.white-box1,
+.white-button,
+.white-button1,
+.white-button2 {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 90%;
+  max-width: 360px;
+}
+.nokori1 { margin-left: 20px; }
+.nokori2 { margin-left: 20px; }
+
+@media (min-width: 768px) {
+  .background-b { max-width: 640px; }
+  .background-c { max-width: 640px; }
+  .white-box, .white-box1, .white-button, .white-button1, .white-button2 { max-width: 520px; }
+}
+
+
+
+.white-button1 {
+
+  /* 見た目の設定 */
+
+  display: inline-block; /* ボタンらしい形にするため */
+
+  padding: 15px 24px; /* 内側の余白（上下左右） */
+
+  background-color: #ffffff; /* 背景色を白に */
+
+  color: #333333; /* 文字色を濃いグレーに */
+
+  border: 1px solid #000000; /* 枠線（白背景でも見えるように）*/
+
+  border-radius: 15px; /* 角を丸くする */
+
+  text-decoration: underline; /* 下線を引く */
+
+  text-decoration-color: #000000; /* 下線の色を黒にする */
+
+  font-weight: bold; /* 文字を太くする */
+
+  font-size:18px;
+
+  /* カーソルを乗せたときの変化を滑らかに */
+
+  transition: background-color 0.3s, color 0.3s;
+
+  margin-left:70px;
+
+  margin-top:20px;
+
+}
+
+
+
+/* マウスカーソルが乗ったときのデザイン */
+
+.white-button1:hover {
+
+  background-color: #f2f2f2; /* 背景を少しグレーに */
+
+  color: #000000; /* 文字色を黒に */
+
+  cursor: pointer; /* カーソルを指マークに */
+
+}
+
+
+
+.white-button2 {
+
+  /* 見た目の設定 */
+
+  display: inline-block; /* ボタンらしい形にするため */
+
+  padding: 15px 24px; /* 内側の余白（上下左右） */
+
+  background-color: #ffffff; /* 背景色を白に */
+
+  color: #333333; /* 文字色を濃いグレーに */
+
+  border: 1px solid #000000; /* 枠線（白背景でも見えるように）*/
+
+  border-radius: 15px; /* 角を丸くする */
+
+  text-decoration: underline; /* 下線を引く */
+
+  text-decoration-color: #000000; /* 下線の色を黒にする */
+
+  font-weight: bold; /* 文字を太くする */
+
+  font-size:20px;
+
+  /* カーソルを乗せたときの変化を滑らかに */
+
+  transition: background-color 0.3s, color 0.3s;
+
+  margin-left:12px;
+
+  margin-top:20px;
+
+}
+
+
+
+/* マウスカーソルが乗ったときのデザイン */
+
+.white-button2:hover {
+
+  background-color: #f2f2f2; /* 背景を少しグレーに */
+
+  color: #000000; /* 文字色を黒に */
+
+  cursor: pointer; /* カーソルを指マークに */
+
+}
